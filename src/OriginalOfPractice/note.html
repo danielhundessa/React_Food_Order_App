@@ -1,0 +1,57 @@
+<p>
+    React Context is a way to manage state globally.
+    
+    It can be used together with the useState Hook to share state 
+    between deeply nested components more easily than with useState alone.
+
+   WHY REACT CONTEXT?
+   If we have many nested components and if the component at the top and 
+   bottom need access to the state we will need to pass the state as
+   props through EACH nested component and this is called PROP DRILLING to
+   AVOID THIS ISSUE we use create Context.
+
+   To create context it must be imported using createContext and
+   inizialize it.
+
+
+   use the Context Provider to wrap the tree of components that need
+   the state Context.
+
+   Wrap child components in the Context Provider and supply the state value.
+
+
+          <p>React useReducer Hook</p>
+  useReducer Hook is similar to the useState Hook.
+  for multiple pieces of state that rely on complex logic useReducer is 
+  better solution
+
+  SYNTAX
+  useReducer Hook accepts two arguments
+  useReducer (<reducer>, <initialState>)
+
+    The reducer function contains custom state logic and the initialState
+    The useReducer Hook returns the current state and a dispatch method.
+
+The reducer function specifies how the state gets updated.takes the state
+and action arguments and should return next state.
+
+useReducer returns an array with exactly two values.
+the current state which during first render sets to <initailState>
+    the dispatch function lets to update the state to a different 
+    value and trigger re-render.
+
+    You need to pass the action as the only argument to the dispatch
+    function. 
+
+    React will set the next state to the result of calling the reducer
+    function provided with the current state and the action passed to 
+    dispatch.
+
+    dispatch functions do not have a return value.
+    dispatch function only updates the state variable for the next render
+
+import { useReducer } from 'react';
+
+
+
+</p>
